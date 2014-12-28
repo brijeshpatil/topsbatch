@@ -1,0 +1,102 @@
+﻿<%@ master language="C#" autoeventwireup="true" inherits="Administrator, App_Web_aahuzyob" %>
+
+
+
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Tops Technology</title>
+                <link rel="icon" href="../images/logo.png" type="image/x-icon"/>
+        <!-- http://www.topsint.com/topserp/images/logo.ico >
+            <link rel="icon" href="../images/logo.ico" type="image/x-icon"/>
+		
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="../js/jquery.min.js"></script>
+		 <!-- Custom Theme files -->
+        <link href="../css/bootstrap.css" rel='stylesheet' type='text/css' />
+		<link href="../css/style.css" rel='stylesheet' type='text/css' />
+   		 <!-- Custom Theme files -->
+		
+		 <!---- start-smoth-scrolling---->
+	
+		<script>
+		    $(function () {
+		        var pull = $('#pull');
+		        menu = $('nav ul');
+		        menuHeight = menu.height();
+		        $(pull).on('click', function (e) {
+		            e.preventDefault();
+		            menu.slideToggle();
+		        });
+		        $(window).resize(function () {
+		            var w = $(window).width();
+		            if (w > 320 && menu.is(':hidden')) {
+		                menu.removeAttr('style');
+		            }
+		        });
+		    });
+		</script>
+
+
+ <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+		
+	</head>
+	<body>
+        <form id="form1" runat="server">
+		<!----- start-header---->
+			<div id="home" class="header">
+					<div class="top-header">
+						<div class="container">
+                            
+						<div class="logo">
+							<a href="#"><img src="../images/logoTops.png" title="doctor" />
+                            </a>
+						</div>
+						<!----start-top-nav---->
+						 <nav class="top-nav">
+							<ul class="top-nav">
+                                
+								<li class="active"><a href="Centers.aspx" class="scroll">Centers</a></li>
+								<li><a href="Counsellors.aspx" class="scroll">Counsellors</a></li>
+								<li><a href="Technology.aspx" class="scroll">Technologies</a></li>
+								<li><a href="#contact" class="scroll">Contact</a></li>
+							</ul>
+							<a href="#" id="pull"><img src="../images/menu-icon.png" title="menu" /></a>
+						</nav>
+						<div class="clearfix"> </div>
+					</div>
+
+
+
+            
+
+                    
+				</div>
+			</div>
+		            
+			<div id="about" class="about">
+				<div class="container">
+ <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+			
+			    <div class="clearfix"> </div>
+			
+			<!---- contact ---->
+			<div class="clearfix"> </div>
+			<!--- copy-right ---->
+			<div class="copy-right">
+				<center>Cpoyright reserved by Tops Technologies &copy; 2014</center>
+				<div class="clearfix"> </div>
+			</div>
+			<!--- copy-right ---->
+            </form>
+	</body>
+</html>
+
+
+
